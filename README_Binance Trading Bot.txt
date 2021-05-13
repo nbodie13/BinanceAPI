@@ -36,10 +36,10 @@ https://github.com/binance/binance-spot-api-docs/blob/master/web-socket-streams.
 	a) Type python into CMD to identify python version
 	b) Dowload TA-Lib wrapper from website with correct version (3.9 --> cp39)
 	c) Locate file in C:\Users\Username or C:\ and navigate to that folder in CMD
-	d) Run pip install TA_Lib-0.4.19-cp39-cp39-win_amd64.whl
+	d) Run pip install TA_Lib-0.4.19-cp39-cp39-win_amd64.whl (may be a different filename)
 	e) Verify
 		i) In VS Code terminal, type python
-		ii) use import talib command (if no error, success)
+		ii) use "import talib" command (if no error, success)
 		iii) type quit() to exit python
 
 9. Install numpy
