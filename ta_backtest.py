@@ -49,13 +49,13 @@ def sma(dataset, period = 9, scale_factor = 1):
         this_window.pop(0)
         i += 1
     return sma
-# Get results of SMA function
-# sma_ = sma(close,9)
-# print(sma_)
-# print(len(sma_))
+    # Get results of SMA function
+    # sma_ = sma(close,9)
+    # print(sma_)
+    # print(len(sma_))
 
 ####### Exponential Moving Average #######
-def ema(dataset, period = 13, scale_factor=1):
+def ema(dataset, period = 10, scale_factor=1):
  # Scale the dataset if you don't want to use the give data timeframe
     dataset = scale_data(dataset,scale_factor)
 
@@ -67,17 +67,23 @@ def ema(dataset, period = 13, scale_factor=1):
     i = 0
     ema = []
     this_window = []
+    multiplier = 2/(period+1)
+    print(len(dataset-1))
     while i < period-1:
         ema.append(math.nan)
         this_window.append(dataset[i])
         i += 1
-    while i < len(dataset):
+    if i == period-1:
         this_window.append(dataset[i])
         ema.append(sum(this_window)/period)
-        this_window.pop(0)
+        i += 1
+    while i >= period & i < len(dataset):
+        # ema.append((dataset[i]-ema[-1])*multiplier+ema[-1])
+        print(i)
         i += 1
     return ema
+
 # Get results of EMA function
-# ema_ = ema(close,9,3)
+ema_ = ema(close,10)
 # print(ema_)
 # print(len(ema_))
