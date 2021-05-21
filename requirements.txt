@@ -1,0 +1,8 @@
+# RUN pip install -r requirements.txt
+# installs libraries required for code
+
+python-binance
+numpy
+pandas
+pandas_ta
+websocket_client

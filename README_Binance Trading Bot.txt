@@ -18,6 +18,7 @@ https://github.com/binance/binance-spot-api-docs/blob/master/web-socket-streams.
 
 4. View KLine (candlestick data)
 	wscat -c wss://stream.binance.com:9443/ws/btcusdt@kline_15m
+		binance api docs: https://github.com/binance-us/binance-official-api-docs/blob/master/rest-api.md#klinecandlestick-data
 
 5. Save K Line data to file
 	wscat -c wss://stream.binance.com:9443/ws/btcusdt@kline_15m | tee dataset.txt
