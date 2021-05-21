@@ -10,7 +10,7 @@ class Account:
     
 dataset = 'data/15minutes.csv'
 if not os.path.isfile(dataset):
-    no_file = "File '%s' not found. Please try again." % dataset
+    no_file = "File '%s' not found. Please try again. Be sure that your path is correct." % dataset
     print(no_file)
 else:
     df = pd.read_csv(dataset,index_col=0,
@@ -39,7 +39,7 @@ def strat():
             {"kind": "sma", "close": "volume", "length": 20, "prefix": "VOLUME"},
         ]
     )
-# To run your "Custom Strategy"
+    # To run your "Custom Strategy"
     my_data.ta.strategy(CustomStrategy)
     print(my_data)
 
